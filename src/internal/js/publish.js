@@ -47,7 +47,7 @@ async function publish () {
     }
 }
 
-$('#category').on('change', () => {
+$('#category').on('input', () => {
     if ($('#category').val() === 'deb')
         $('#deb-pkg-name-group').css('display', 'block')
     else

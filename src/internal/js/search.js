@@ -25,15 +25,14 @@ function apps_search () {
 
         try { let app_summary_i = 0
         $('[id^="app-card"][id$="-summary"]').each(function () {
-            $('#' + this.id).text(truncateText(data.results[app_summary_i].summary, 30))
+            $('#' + this.id).text(truncateText(data.results[app_summary_i].summary, 36))
             app_summary_i++
         }) } catch {}
 
         try { let app_category_i = 0
-            $('[id^="app-card"][id$="-category"]').each(function () {
-                $('#' + this.id).css('font-weight', 'bold')
-                $('#' + this.id).text(data.results[app_category_i].category)
-                app_category_i++
+        $('[id^="app-card"][id$="-category"]').each(function () {
+            $('#' + this.id).text(data.results[app_category_i].category)
+            app_category_i++
         }) } catch {}
     })
 }
@@ -46,4 +45,6 @@ function search () {
     apps_search()
 }
 
-show_app_cards()
+$('#search-text').on('input', function () { apps_search() })
+
+show_app_cards(4, 3)

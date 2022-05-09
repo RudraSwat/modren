@@ -1,0 +1,16 @@
+{
+    "featured_apps": [1],
+    "apps": {
+        "1": {
+            "name": "Telegram",
+            "website": "telegram.org",
+            "logo": "https://telegram.org/img/t_logo.svg",
+            "summary": "A secure messaging app.",
+            "pwa_url": "web.telegram.org",
+            "category": "snap",
+            "accent": "#28a8ea",
+            "pointer": "telegram-desktop",
+            "pwd": "$argon2i$v=19$m=4096,t=3,p=1$+l7DhEtjXJqo9fuVrEWJ1Q$1quBUdznqEBYcFZ4nGu2ETqNVDTaU3hnkWUxRTbiV9o"
+        }
+    }
+}

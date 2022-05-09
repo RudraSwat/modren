@@ -12,7 +12,7 @@ app = Flask(__name__)
 def home():
     with open('data/applist.json') as applist_file:
         applist = json.load(applist_file)
-        data = { 'latest_apps': [] }
+        data = { 'featured_apps': applist['featured_apps'], 'latest_apps': [] }
         for app in list(applist['apps'])[-20:]:
             applist['apps'][app]['id'] = app
             del applist['apps'][app]['pwd']
@@ -29,11 +29,16 @@ def appview():
 def search():
     with open('data/applist.json') as applist_file:
         data = { 'results': [] }
+
+        if len(request.args['name']) < 3:
+            return data
+
         not_so_relevant = []
         applist = json.load(applist_file)
         for app in applist['apps']:
             app_id = app
             app = applist['apps'][app]
+            del app['pwd']
             app['id'] = app_id
             if ''.join(app['name'].split()).lower().find(''.join(request.args['name'].split()).lower()) != -1:
                 if ''.join(app['name'].split()).lower().startswith(''.join(request.args['name'].split()).lower()):
