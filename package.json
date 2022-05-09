@@ -1,13 +1,15 @@
 {
   "name": "modren",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A super-app for a number of mini-apps",
   "main": "main.js",
   "homepage": "https://ubuntu-web.org",
   "author": "Rudra Saraswat",
   "license": "GPL-3.0-or-later",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "dependencies": {
     "@electron/remote": "^2.0.1",
@@ -16,6 +18,17 @@
     "jquery": "^3.6.0"
   },
   "devDependencies": {
-    "electron": "^18.2.0"
+    "electron": "^18.2.0",
+    "electron-builder": "^22.14.5"
+  },
+  "build": {
+    "appId": "rs2009.modren",
+    "productName": "Modren Store",
+    "asar": false,
+    "linux": {
+      "target": ["appimage"],
+      "category": "System",
+      "maintainer": "Rudra Saraswat"
+    }
   }
 }

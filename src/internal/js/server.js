@@ -1,1 +1,1 @@
-STORE_SERVER="http://localhost:2200"
+STORE_SERVER="https://server.modren.ruds.io"
