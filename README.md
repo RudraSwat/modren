@@ -23,8 +23,10 @@ Made with ❤️ for 🐧
     Modren is a modern store for Linux. It includes support for snaps, flatpaks from Flathub, APT packages and DEBs.
     <br>
     <br>
+    <b><a href="https://github.com/RudraSwat/modren/releases">Download</a></b>
+    <b>·</b>
     <a href="https://github.com/RudraSwat/modren/issues">Report Bug</a>
-    ·
+    <b>·</b>
     <a href="https://github.com/RudraSwat/modren/issues">Request Feature</a>
   </p>
 </div>
@@ -32,6 +34,8 @@ Made with ❤️ for 🐧
 [![Modren Screenshot][product-screenshot]](https://github.com/RudraSwat/modren)
 
 Modren is a modern take on stores like GNOME Software and Discover, which includes support for APT packages, Snaps, Flatpaks from Flathub and DEB files out-of-the-box. It currently only supports Debian-based distributions like Ubuntu, but I'll be adding support for other distros like Fedora and Arch too. I'll also be adding support for makedeb packages. Unlike the other stores, modren does not index the different databases. Instead, you can directly add/publish apps to the store, making it a way for Linux developers to easily publish their apps and make them available for everyone to use.
+
+Do star this repository if you like the idea of Modren! ⭐
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
