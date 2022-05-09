@@ -1,0 +1,21 @@
+{
+  "name": "modren",
+  "version": "1.0.1",
+  "description": "A super-app for a number of mini-apps",
+  "main": "main.js",
+  "homepage": "https://ubuntu-web.org",
+  "author": "Rudra Saraswat",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.1",
+    "@types/jquery": "^3.5.6",
+    "bcrypt": "^5.0.1",
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}

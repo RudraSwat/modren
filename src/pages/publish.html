@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>Apps</title>
+
+    <!-- Import bootstrap v5.0. -->
+    <link href="../external/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <div class="row">
+        <div class="container-fluid">
+          <form onsubmit="try { publish(); return false } catch (e) { console.log(e); return false; }">
+            <div class="form-group">
+              <label for="name">App name</label>
+              <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="App name">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="website">Website</label>
+              <input type="text" class="form-control" id="website" placeholder="Website URL">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="summary">Summary</label>
+              <input type="text" class="form-control" id="summary" placeholder="Summary">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="logo">Logo</label>
+              <input type="text" class="form-control" id="logo" placeholder="Logo URL">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="pointer">Pointer</label>
+              <input type="text" class="form-control" id="pointer" placeholder="(examples: URL to deb; APT, flatpak or snap package name)">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="pwa_url">Accent color</label>
+              <input style="width: 50px;" type="color" class="form-control" id="accent">
+              <div class="invalid-feedback">This field is mandatory.</div>
+            </div>
+            <div class="form-group">
+              <label for="pwa_url">App deletion password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password">
+              <div class="invalid-feedback">This field is mandatory and cannot be changed.</div>
+            </div>
+            <div class="form-group" id="deb-pkg-name-group" style="display: none;">
+              <label for="deb-pkg-name">Debian package name</label>
+              <input type="text" class="form-control" id="deb-pkg-name" placeholder="Name of the Debian package (examples: firefox; gedit)">
+              <div class="invalid-feedback">You need to fill in the Debian package name for the DEB file.</div>
+            </div>
+            <div class="form-group">
+              <label for="category">Select a category</label>
+              <select class="form-control" id="category">
+                <option value="" selected disabled hidden>Choose an option</option>
+                <option>deb</option>
+                <option>flathub</option>
+                <option>apt</option>
+                <option>snap</option>
+              </select>
+              <div class="invalid-feedback">Select a category.</div>
+            </div>
+            <button type="submit" id="publish-button" class="btn btn-primary">Publish</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-4"></div>
+      <div class="row" id="results">
+      </div>
+    </div>
+
+    <!-- Import server.js. -->
+    <script src="../internal/js/server.js"></script>
+
+    <!-- Import publish.js -->
+    <script src="../internal/js/publish.js"></script>
+
+    <!-- Import common.js. -->
+    <script src="../internal/js/common.js"></script>
+
+    <!-- Import bootstrap JS bundle. -->
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

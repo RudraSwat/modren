@@ -1,0 +1,1 @@
+STORE_SERVER="http://localhost:2200"

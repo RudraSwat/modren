@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Apps</title>
+
+    <!-- Import bootstrap v5.0. -->
+    <link href="../external/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div class="container">
+      <div class="row" style="display: flex;" id="app_banner">
+          <img width="200px" style="padding: 20px; object-fit: cover; height: 100%; width: 20%; margin: 50px;" id="app-icon" class="border">
+          <div style="display: flex; flex-direction: column; justify-content: center; width: 50%;">
+            <p class="text-danger" id="app-warning" style="display: none;"><b>This app probably won't work on your computer. Support for these types of apps isn't installed on your computer.</b></p>
+            <h1 id="app-title" style="font-size: 60px;">Loading...</h1>
+            <span id="app-category" style="font-size: 30px;">Loading...</span>
+            <br>
+            <span id="app-pointer" style="display: none; font-size: 20px;">Loading...</span>
+            <br>
+            <p class="text-danger" id="flatpak-warning" style="display: none;"><b>If this is the first time you're installing a flatpak, you'll need to log out and log back in after installing it.</b></p>
+          </div>
+      </div>
+      <div class="row mt-2">
+        <button id="install_button" class="btn btn-primary btn-lg" style="margin-left: 50px; width: 200px !important; display: none !important;" onclick="install()">Install this app</button>
+
+        <div id="app-spinner" class="spinner-border" style="margin-left: 1.25rem; margin-top: 7px; display: none;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+
+        <p style="margin-top: 30px; margin-left: 40px;"><b>Do not switch to another tab in the store or close this window while installation or removal.</b></p>
+      </div>
+      <div class="row mt-4"></div>
+      <hr style="margin: 0 40px 0 40px;">
+      <div class="row" style="margin: 30px;">
+        <br>
+        <p style="text-transform: uppercase;"><b>Summary</b></p>
+        <p id="app-summary">Loading...</p>
+        <p id="app-deb-url" class="text-success" style="display: none;">Loading...</p>
+      </div>
+      <a onclick="app_delete()" id="app-delete" style="margin-left: 40px;" href="javascript:void(0)">App deletion</a>
+      <div class="row mt-4"></div>
+    </div>
+
+    <!-- Import server.js. -->
+    <script src="../internal/js/server.js"></script>
+
+    <!-- Import installation.js. -->
+    <script src="../internal/js/installation.js"></script>
+
+    <!-- Import app-view.js. -->
+    <script src="../internal/js/app-view.js"></script>
+
+    <!-- Import common.js. -->
+    <script src="../internal/js/common.js"></script>
+
+    <!-- Import bootstrap JS bundle.. -->
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

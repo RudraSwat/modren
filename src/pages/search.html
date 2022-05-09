@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Apps</title>
+
+    <!-- Import bootstrap v5.0. -->
+    <link href="../external/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Main container -->
+    <div id="container" class="container">
+      <div class="row">
+        <div class="container-fluid">
+          <form class="d-flex" style="margin-top: 30px;" onsubmit="search(); return false;">
+            <input class="form-control me-2" type="search" id="search-text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="row mt-4"></div>
+    </div>
+
+    <!-- Import server.js. -->
+    <script src="../internal/js/server.js"></script>
+
+    <!-- Import generic_page.js -->
+    <script src="../internal/js/generic_page.js"></script>
+
+    <!-- Import search.js -->
+    <script src="../internal/js/search.js"></script>
+
+    <!-- Import common.js. -->
+    <script src="../internal/js/common.js"></script>
+
+    <!-- Import bootstrap JS bundle. -->
+    <script src="../external/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

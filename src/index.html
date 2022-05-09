@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Store</title>
+
+    <!-- Import bootstrap v5.0. -->
+    <link href="external/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      * { user-select: none; -webkit-user-drag: none; }
+      button { cursor: default !important; }
+    </style>
+  </head>
+
+  <body style="display: flex; flex-direction: column; height: 100%;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-light bg-light sticky-top" style="margin-bottom: 45px;">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand">Apps</a>
+        <div class="btn-group" role="group" aria-label="Stores">
+          <button class="btn btn-outline-dark active shadow-none" id="apps-button" onclick="page('apps')">Apps</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Stores">
+          <button class="btn btn-outline-dark shadow-none" id="search-button" onclick="page('search')">Search</button>
+          <button class="btn btn-outline-dark shadow-none" id="publish-button" onclick="page('publish')">Publish</button>
+        </div>
+      </div>
+    </nav>
+
+    <script>
+      let webview = document.createElement("webview")
+      webview.style.flexGrow = 1
+      webview.setAttribute("id", "webview")
+      webview.setAttribute("nodeintegration", "")
+      webview.setAttribute("webpreferences", "contextIsolation=false")
+
+      webview.addEventListener('dom-ready', () => {
+        webview.insertCSS('* { user-select: none; -webkit-user-drag: none; } button { cursor: default !important; @extend: shadow-none; border: none !important; color: white !important; }')
+        webview.executeJavaScript("$('button').addClass('shadow-none');0")
+      })
+
+      document.body.appendChild(webview)
+
+      document.querySelector('#webview').addEventListener('console-message', (e) => {
+        console.log('webview logged a message:', e.message)
+      })
+
+      const $ = require("jquery")
+
+      function page(page) {
+        switch (page) {
+          case 'apps':
+            webview.setAttribute("src", "pages/app-index.html")
+            $('#apps-button').addClass('active')
+            $('#search-button').removeClass('active')
+            $('#publish-button').removeClass('active')
+            break;
+          case 'search':
+            webview.setAttribute("src", "pages/search.html")
+            $('#apps-button').removeClass('active')
+            $('#search-button').addClass('active')
+            $('#publish-button').removeClass('active')
+            break;
+          case 'publish':
+            webview.setAttribute("src", "pages/publish.html")
+            $('#apps-button').removeClass('active')
+            $('#search-button').removeClass('active')
+            $('#publish-button').addClass('active')
+            break;
+        }
+      }
+
+      page('apps')
+    </script>
+
+    <!-- Import bootstrap JS bundle. -->
+    <script src="external/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
