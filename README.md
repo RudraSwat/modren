@@ -3,16 +3,14 @@
 <br>
 <div align="center">
   <a href="https://gitlab.com/RudraSwat/modren">
-    <img src="build/icon.png" alt="Logo" width="200" height="200">
+    <img src="https://user-images.githubusercontent.com/26926757/167629704-e4216e0c-3f27-453a-8cdf-246beb0211c2.png" alt="Logo Banner">
   </a>
-
-<h1 align="center">Modren</h1>
 
 **v1.0.0**
 
 Made with ❤️ for 🐧
 <br>
-
+  
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
