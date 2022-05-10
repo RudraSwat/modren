@@ -1,5 +1,10 @@
 const $ = require("jquery");
 
+$(document).on('click', 'a[href^="http"]', function(event) {
+    event.preventDefault();
+    require('electron').shell.openExternal(this.href);
+});
+
 function get_featured_apps () {
     $.getJSON(`${STORE_SERVER}/api/home`, function (data) {
         window.featured_apps = data.featured_apps

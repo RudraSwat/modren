@@ -44,7 +44,7 @@ Do star this repository if you like the idea of Modren! ⭐
 <!-- COMPARISON -->
 | Name of store | Differences |
 |---------------|-------------|
-| GNOME Software | Modren uses Electron unlike GNOME Software, which uses GTK; Modren is much lighter (GNOME Software takes up 700MBs just when launched, while Modren takes up around 70MBs when being used); It has a much easier way to publish apps from inside the store itself, while GNOME Software requires you to get your app added to a repository |
+| GNOME Software | Modren uses Electron unlike GNOME Software, which uses GTK; Modren is much lighter (GNOME Software takes up more than 300MBs res just when launched, while Modren takes up around 100MBs when being used); It has a much easier way to publish apps from inside the store itself, while GNOME Software requires you to get your app added to a repository |
 | KDE Discover | similar to GNOME Software |
 | deb-get | Modren has a GUI; deb-get supports only debs; app publishing is similar in both but you can directly publish apps from inside the Modren UI, while deb-get requires you to create a pull request in GitHub to create a function for the app in the main script |
 
