@@ -10,7 +10,7 @@
 
 Made with ❤️ for 🐧
 <br>
-  
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -31,7 +31,7 @@ Made with ❤️ for 🐧
 
 [![Modren Screenshot][product-screenshot]](https://github.com/RudraSwat/modren)
 
-Modren is a modern take on stores like GNOME Software and Discover, which includes support for APT packages, Snaps, Flatpaks from Flathub and DEB files out-of-the-box. It currently only supports Debian-based distributions like Ubuntu, but I'll be adding support for other distros like Fedora and Arch too. I'll also be adding support for makedeb packages. Unlike the other stores, modren does not index the different databases. Instead, you can directly add/publish apps to the store, making it a way for Linux developers to easily publish their apps and make them available for everyone to use.
+Modren is a modern take on stores like [GNOME Software](https://wiki.gnome.org/Apps/Software) and [KDE Discover](https://apps.kde.org/en-gb/discover/), which includes support for APT packages, Snaps, Flatpaks from Flathub and DEB files out-of-the-box. It currently only supports Debian-based distributions like Ubuntu, but I'll be adding support for other distros like Fedora and Arch too. I'll also be adding support for makedeb packages. Unlike the other stores, modren does not index the different databases. Instead, you can directly add/publish apps to the store, making it a way for Linux developers to easily publish their apps and make them available for everyone to use.
 
 Do star this repository if you like the idea of Modren! ⭐
 
@@ -42,9 +42,9 @@ Do star this repository if you like the idea of Modren! ⭐
 <!-- COMPARISON -->
 | Name of store | Differences |
 |---------------|-------------|
-| GNOME Software | Modren uses Electron unlike GNOME Software, which uses GTK; Modren is much lighter (GNOME Software takes up more than 300MBs res just when launched, while Modren takes up around 100MBs when being used); It has a much easier way to publish apps from inside the store itself, while GNOME Software requires you to get your app added to a repository |
-| KDE Discover | similar to GNOME Software |
-| deb-get | Modren has a GUI; deb-get supports only debs; app publishing is similar in both but you can directly publish apps from inside the Modren UI, while deb-get requires you to create a pull request in GitHub to create a function for the app in the main script |
+| [GNOME Software](https://wiki.gnome.org/Apps/Software) | Modren uses Electron unlike GNOME Software, which uses GTK; Modren is much lighter (GNOME Software takes up more than 300MBs res just when launched, while Modren takes up around 100MBs when being used); It has a much easier way to publish apps from inside the store itself, while GNOME Software requires you to get your app added to a repository |
+| [KDE Discover](https://apps.kde.org/en-gb/discover/) | similar to GNOME Software |
+| [deb-get](https://github.com/wimpysworld/deb-get) | Modren has a GUI; deb-get supports only debs; app publishing is similar in both but you can directly publish apps from inside the Modren UI, while deb-get requires you to create a pull request in GitHub to create a function for the app in the main script |
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -65,8 +65,8 @@ Do star this repository if you like the idea of Modren! ⭐
 <!-- DEPENDENCIES -->
 ## Dependencies
 
-- zenity
-- pkexec
+- [zenity](https://github.com/GNOME/zenity)
+- [pkexec](https://github.com/wingo/polkit/blob/master/src/programs/pkexec.c)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
